@@ -6,6 +6,7 @@ export default {
     orders: '注文',
     finance: '財務',
     demandForecast: '需要予測',
+    restocking: '補充発注',
     companyName: '触媒コンポーネンツ',
     subtitle: '在庫管理システム'
   },
@@ -106,6 +107,21 @@ export default {
     title: '注文',
     description: '顧客注文の表示と管理',
     allOrders: 'すべての注文',
+    submitted: {
+      title: '発注済みオーダー',
+      empty: '送信済みの補充発注はまだありません。',
+      error: '発注済みオーダーの読み込みに失敗しました',
+      days: '{count}日',
+      table: {
+        orderNumber: '注文番号',
+        items: '商品',
+        totalValue: '合計金額',
+        submittedDate: '発注日',
+        leadTime: 'リードタイム',
+        expectedDelivery: '納品予定日',
+        status: 'ステータス'
+      }
+    },
     totalOrders: '総注文数',
     totalRevenue: '総収益',
     avgOrderValue: '平均注文額',
@@ -189,6 +205,39 @@ export default {
   },
 
   // Filters
+  restocking: {
+    title: '補充発注',
+    description: '需要予測と予算に基づいて補充発注を提案し、発注します',
+    budget: '予算',
+    budgetLabel: '補充予算',
+    recommendedItems: '推奨商品',
+    loadError: '需要予測の読み込みに失敗しました',
+    summary: {
+      budget: '予算',
+      spent: '使用額合計',
+      remaining: '残額',
+      leadTime: '発注リードタイム',
+      days: '{count}日'
+    },
+    table: {
+      include: '含める',
+      sku: 'SKU',
+      itemName: '商品名',
+      trend: '傾向',
+      supplier: '仕入先',
+      quantity: '数量',
+      unitCost: '単価',
+      lineTotal: '小計',
+      leadTime: 'リードタイム(日)'
+    },
+    includeItem: '{sku}を発注に含める',
+    placeOrder: '発注する',
+    placingOrder: '発注中...',
+    empty: '予算が不足しているため、推奨商品を購入できません。予算を増やしてください。',
+    noneSelected: '発注に含まれる商品がありません。',
+    success: '注文{orderNumber}を送信しました。リードタイム: {count}日',
+    error: '発注に失敗しました'
+  },
   filters: {
     timePeriod: '期間',
     location: '場所',
@@ -204,6 +253,7 @@ export default {
     shipped: '出荷済み',
     processing: '処理中',
     backordered: 'バックオーダー',
+    submitted: '発注済み',
     inStock: '在庫あり',
     lowStock: '在庫僅少',
     adequate: '適量'
